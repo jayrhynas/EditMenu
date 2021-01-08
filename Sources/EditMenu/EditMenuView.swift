@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-public struct EditMenuViewItem {
+public struct EditMenuItem {
     public let title: String
     public let action: () -> Void
     
@@ -13,14 +13,14 @@ public struct EditMenuViewItem {
 
 public extension View {
     /// Attaches a long-press action to this `View` withe the given item titles & actions
-    public func editMenu(@ArrayBuilder<EditMenuViewItem> _ items: () -> [EditMenuViewItem]) -> some View {
+    public func editMenu(@ArrayBuilder<EditMenuItem> _ items: () -> [EditMenuItem]) -> some View {
         EditMenuView(content: self, items: items())
             .fixedSize()
     }
 }
 
 public struct EditMenuView<Content: View>: UIViewControllerRepresentable {
-    public typealias Item = EditMenuViewItem
+    public typealias Item = EditMenuItem
     
     public let content: Content
     public let items: [Item]

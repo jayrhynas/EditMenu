@@ -19,10 +19,10 @@ struct ContentView: View {
                 .padding()
                 .border(Color.white)
                 .editMenu {
-                    EditMenuViewItem("Copy") {
+                    EditMenuItem("Copy") {
                         print("copy")
                     }
-                    EditMenuViewItem("Show Alert") {
+                    EditMenuItem("Show Alert") {
                         showAlert = true
                     }
                 }
