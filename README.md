@@ -1,3 +1,3 @@
 # EditMenu
 
-A description of this package.
+A SwiftUI extension to allow creating custom "Edit Menus" (`UIMenuController`) 
